@@ -14,9 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrcApplication {
 
 	@RequestMapping("/")
-    String hello() {
-        return "Hello World! JavaInterviewPoint";
+    public String hello() {
+        return "Hello World! ORC";
     }
+	
+	@RequestMapping("/welcome")
+    public String welcome() {
+        return "welcomepage";
+    }
+	
 	@RequestMapping(method=RequestMethod.GET, path="/hello") 
     public String helloworld() {
         return "Hello World!";
