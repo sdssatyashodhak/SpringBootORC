@@ -4,6 +4,6 @@
 	<title>ORC</title>
 </head>
 <body>
-Hey there
+Hi ${name}
 </body>
 </html>
