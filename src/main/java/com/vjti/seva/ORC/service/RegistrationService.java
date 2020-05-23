@@ -1,4 +1,4 @@
-/*package com.vjti.seva.ORC.service;
+package com.vjti.seva.ORC.service;
 
 import javax.transaction.Transactional;
 
@@ -20,8 +20,9 @@ public class RegistrationService {
 
 
 	public void registerUser(Registration registration) {
+		System.out.println("Inside registerUser");
 		registrationRepository.save(registration);
+		System.out.println("SAVED!!!");
 	}
 
 }
-*/

@@ -33,8 +33,8 @@ public class OrcApplication {
 		return mv;
     }
 	
-	@RequestMapping("/registration")
-	public String registration(Registration registration) {
+	@RequestMapping("/register")
+	public String registration() {
 		return "registration";
 	}
 	

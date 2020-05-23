@@ -9,17 +9,18 @@ import javax.persistence.Table;
 public class Registration {
 	
 	@Id
-	private int rollNo;
-	private String name;
+	private int rollno;
+	private String fullname;
 	private String address;
 	private String dob;
 	private String city;
 	private String password;
+	//private String emailid;
 	
-	public Registration(int rollNo, String name, String address, String dob, String city, String password) {
-		super();
-		this.rollNo = rollNo;
-		this.name = name;
+	public Registration(int rollno, String fullname, String address, String dob, String city, String password) {
+		//super();
+		this.rollno = rollno;
+		this.fullname = fullname;
 		this.address = address;
 		this.dob = dob;
 		this.city = city;
@@ -31,17 +32,17 @@ public class Registration {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getRollNo() {
-		return rollNo;
+	public int getrollno() {
+		return rollno;
 	}
-	public void setRollNo(int rollNo) {
-		this.rollNo = rollNo;
+	public void setrollno(int rollno) {
+		this.rollno = rollno;
 	}
-	public String getName() {
-		return name;
+	public String getfullname() {
+		return fullname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setfullname(String fullname) {
+		this.fullname = fullname;
 	}
 	public String getAddress() {
 		return address;
@@ -64,7 +65,7 @@ public class Registration {
 
 	@Override
 	public String toString() {
-		return "Registration [rollNo=" + rollNo + ", name=" + name + ", address=" + address + ", dob=" + dob + ", city="
+		return "Registration [rollno=" + rollno + ", fullname=" + fullname + ", address=" + address + ", dob=" + dob + ", city="
 				+ city + ", password=" + password + "]";
 	}
 

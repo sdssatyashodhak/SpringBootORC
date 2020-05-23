@@ -1,4 +1,4 @@
-/*package com.vjti.seva.ORC.controller;
+package com.vjti.seva.ORC.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +14,17 @@ public class RestController {
 	
 	@GetMapping("/registration")
 	public String registration() {
-		Registration registration = new Registration(0, null, null, null, null, null);
+	    System.out.println("Inside Registration method");
+		Registration registration = new Registration(1, "abcd", "df", "01/02/1999", "oisdf", "sdff");
+		System.out.println("Object created");
 		registrationService.registerUser(registration);
 		return "registration done";
 	}
 
+	@GetMapping("/healthCheck")
+	public String check()
+	{
+		return "checked";
+	}
+	
 }
-*/
