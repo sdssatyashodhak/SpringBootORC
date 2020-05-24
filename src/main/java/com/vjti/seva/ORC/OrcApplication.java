@@ -25,8 +25,8 @@ public class OrcApplication {
         return "Hello World! ORC";
     }
 	
-	@RequestMapping("/welcome")
-    public ModelAndView welcome(@RequestParam("name") String name) {
+	@RequestMapping("/welcomepage")
+    public ModelAndView welcomepage(@RequestParam("name") String name) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("name", name);
 		mv.setViewName("welcomepage");

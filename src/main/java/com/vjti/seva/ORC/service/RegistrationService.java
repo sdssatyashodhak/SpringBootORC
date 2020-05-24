@@ -18,11 +18,18 @@ public class RegistrationService {
 	}
 
 
-
 	public void registerUser(Registration registration) {
 		System.out.println("Inside registerUser");
 		registrationRepository.save(registration);
 		System.out.println("SAVED!!!");
+	}
+	
+	public Registration getStudent(int rollno) {
+		Registration registration = registrationRepository.findById(rollno).orElse(new Registration());
+		
+		System.out.println(registrationRepository.findByCity("Badlapur"));
+		
+		return registration;
 	}
 
 }

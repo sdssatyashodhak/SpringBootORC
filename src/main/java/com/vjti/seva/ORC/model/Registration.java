@@ -17,8 +17,12 @@ public class Registration {
 	private String password;
 	//private String emailid;
 	
+	public Registration() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Registration(int rollno, String fullname, String address, String dob, String city, String password) {
-		//super();
+		super();
 		this.rollno = rollno;
 		this.fullname = fullname;
 		this.address = address;
@@ -26,6 +30,7 @@ public class Registration {
 		this.city = city;
 		this.password = password;
 	}
+	
 	public String getPassword() {
 		return password;
 	}

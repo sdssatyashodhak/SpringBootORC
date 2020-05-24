@@ -2,6 +2,8 @@ package com.vjti.seva.ORC.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.vjti.seva.ORC.model.Registration;
 import com.vjti.seva.ORC.service.RegistrationService;
@@ -25,6 +27,15 @@ public class RestController {
 	public String check()
 	{
 		return "checked";
+	}
+	
+	@GetMapping("/welcome")
+	public ModelAndView welcome(@RequestParam int rollno) {
+	    ModelAndView mv = new ModelAndView();
+	    mv.setViewName("welcomepage");
+		Registration registration = registrationService.getStudent(rollno);
+		mv.addObject(registration);
+		return mv;
 	}
 	
 }
