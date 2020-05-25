@@ -10,7 +10,7 @@ import com.vjti.seva.ORC.model.Registration;
 
 public interface RegistrationRepository extends CrudRepository<Registration, Integer> {
 	
-	@Query("select * from registration where city = ?1 order by fullname")
+	@Query("from Registration where city = ?1 order by fullname")
 	List<Registration> findByCity(String City);
 
 }

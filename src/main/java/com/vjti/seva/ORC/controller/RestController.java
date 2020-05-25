@@ -17,7 +17,7 @@ public class RestController {
 	@GetMapping("/registration")
 	public String registration() {
 	    System.out.println("Inside Registration method");
-		Registration registration = new Registration(1, "abcd", "df", "01/02/1999", "oisdf", "sdff");
+		Registration registration = new Registration(1, "abcd", "df", "1999-03-12", "oisdf", "sdff");
 		System.out.println("Object created");
 		registrationService.registerUser(registration);
 		return "registration done";
